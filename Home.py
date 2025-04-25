@@ -238,6 +238,24 @@ with st.expander("🖌️ My Artworks"):
     for col, (caption, path) in zip(art_cols, artworks):
         with col:
             st.image(path, caption=caption, use_container_width=True)
+# --- Resume ---
+st.markdown("### 📄 My Resume")
+
+resume_file_path = "assets/resume.pdf"
+
+with open(resume_file_path, "rb") as file:
+    resume_bytes = file.read()
+
+st.download_button(
+    label="📥 Download Resume",
+    data=resume_bytes,
+    file_name="resume.pdf",
+    mime="application/pdf",
+)
+
+st.markdown("#### 👀 Resume Preview")
+st.markdown(f'<iframe src="{resume_file_path}" width="100%" height="600px"></iframe>', unsafe_allow_html=True)
+
 # --- Contact ---
 st.markdown('<div id="contact"></div>', unsafe_allow_html=True)
 st.subheader("📬 Contact Me")
