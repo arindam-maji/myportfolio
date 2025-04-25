@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components  # <-- Add this line
 from PIL import Image
 
 st.set_page_config(layout="wide", page_title="Arindam | Portfolio", page_icon="assets/Profile_icon.png")
@@ -239,22 +240,25 @@ with st.expander("🖌️ My Artworks"):
         with col:
             st.image(path, caption=caption, use_container_width=True)
 # --- Resume ---
+# --- Resume ---
 st.markdown("### 📄 My Resume")
 
 resume_file_path = "assets/resume.pdf"
 
+# Download Button
 with open(resume_file_path, "rb") as file:
     resume_bytes = file.read()
 
 st.download_button(
     label="📥 Download Resume",
     data=resume_bytes,
-    file_name="resume.pdf",
+    file_name="Arindam_Maji_Resume.pdf",
     mime="application/pdf",
 )
 
-st.markdown("#### 👀 Resume Preview")
-st.markdown(f'<iframe src="{resume_file_path}" width="100%" height="600px"></iframe>', unsafe_allow_html=True)
+# # Resume Image Preview
+# st.markdown("#### 👀 Resume Preview")
+# st.image("assets/resume.png", use_container_width=True)
 
 # --- Contact ---
 st.markdown('<div id="contact"></div>', unsafe_allow_html=True)
