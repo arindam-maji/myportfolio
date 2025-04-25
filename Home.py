@@ -109,7 +109,15 @@ I'm Arindam Maji, a Computer Science undergrad from LPU with a CGPA of 8.20.
 💻 I'm passionate about transforming raw data into meaningful insights that drive impactful decisions. With skills in R, Excel, Tableau, Python, and SQL, I focus on solving real-world problems and creating innovative, data-centric solutions.
 📊 I also explore data analysis in Python (Pandas, NumPy, Seaborn) and dashboarding with Tableau.
 """)
-
+# --- Education ---
+st.markdown("### 🎓 Education")
+st.markdown("""
+**Lovely Professional University (LPU)**  
+📍 Punjab, India  
+**B.Tech in Computer Science & Engineering**  
+CGPA: 8.20 / 10  
+📅 *2021 – 2025*
+""")
 skills = {
     "Programming Languages": "Python, C++, R, Java, SQL",
     "Data Analysis Tools": "Excel, Pandas, NumPy",
